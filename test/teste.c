@@ -1,4 +1,4 @@
-//Chamada das bibliotecass
+//Chamada das bibliotecasss
 #include "minunit-master/minunit.h"
 #include "../src/calculadora.h" 
 
