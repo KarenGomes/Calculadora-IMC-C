@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get install build-essential
 
       - name: Build the project
-        run: gcc -o unitario Calculadora-IMC-C/test/teste.c
+        run: gcc -o unitario test/teste.c
 
       - name: Run unit test
         run: ./unitario
