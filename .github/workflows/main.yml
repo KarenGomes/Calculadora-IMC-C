@@ -1,0 +1,29 @@
+name: Teste de integração com Minuit por Luan e Karen.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install build essentials
+        run: sudo apt-get install build-essential
+
+      - name: Build the project
+        run: gcc -o unitario Calculadora-IMC-C/test/teste.c
+
+      - name: Run unit test
+        run: ./unitario
+      
